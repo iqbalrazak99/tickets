@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 //Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 
-Route::get('tickets', [TicketController::class, 'index'])->name('tickets.index'); //view tickets
-Route::get('tickets/create', [TicketController::class, 'create'])->name('tickets.create'); //create new tickets
+Route::get('/tickets', [TicketController::class, 'index'])->name('tickets.index'); //view tickets
+Route::get('/tickets/create', [TicketController::class, 'create'])->name('tickets.create'); //create new ticket in form
+Route::post('/tickets/create', [TicketController::class, 'store'])->name('tickets.store'); //create new ticket in database

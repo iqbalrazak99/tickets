@@ -38,7 +38,12 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Ticket::create([
+            'summary'=>request('summary'),
+            'description'=>request('description'),
+            'status'=>request('status'),
+        ]);
+        return redirect()->route('tickets.index');
     }
 
     /**

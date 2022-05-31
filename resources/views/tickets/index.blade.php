@@ -23,7 +23,7 @@
 
     <div class="table-responsive">
 
-        <button type="button" href="{{ route('tickets.create') }}" class="btn btn-outline-primary">Tiket Baru</button>
+        <a class="btn btn-primary" href="{{ route('tickets.create') }}" role="button">Tiket Baru</a>
 
       <table class="table table-striped table-sm">
 
@@ -34,6 +34,7 @@
             <th scope="col">Summary</th>
             <th scope="col">Description</th>
             <th scope="col">Status</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -43,6 +44,7 @@
             <td>{{ $ticket->summary }}</td>
             <td>{{ $ticket->description }}</td>
             <td>{{ $ticket->status }}</td>
+            <td><a href='tickets/{{$ticket->id}}' class="btn btn-primary">Update</a></td>
           </tr>
           @endforeach
         </tbody>

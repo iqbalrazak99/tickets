@@ -19,13 +19,27 @@
       </div>
     </div>
 
-<form action="" method="POST">
+<form action="{{ route('tickets.create') }}" method="POST">
     @csrf
     <div class="form-group">
+        <label for="summary">Summary</label>
+        <input type="text" id="summary" name="summary" class="form-control"/>
 
     </div>
-</form>
 
-    Create
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" class="form-control"/>
+
+    </div>
+
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" id="status" name="status" class="form-control"/>
+
+    </div>
+    <div>
+    <button class="btn btn-outline-primary" type="submit"> Tambah</button>
+</form>
   </main>
 @endsection
