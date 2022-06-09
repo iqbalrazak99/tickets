@@ -44,7 +44,11 @@
             <td>{{ $ticket->summary }}</td>
             <td>{{ $ticket->description }}</td>
             <td>{{ $ticket->status }}</td>
-            <td><a href='tickets/{{$ticket->id}}' class="btn btn-primary">Update</a></td>
+            <td>
+                <a href='tickets/{{$ticket->id}}' class="btn btn-primary">Update</a>
+
+                <a href='tickets/delete/{{$ticket->id}}' class="btn btn-danger">Delete</a>
+            </td>
           </tr>
           @endforeach
         </tbody>
