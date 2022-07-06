@@ -102,6 +102,7 @@ class TicketController extends Controller
      */
     public function destroy(Ticket $ticket)
     {
+
         //
     }
 }
